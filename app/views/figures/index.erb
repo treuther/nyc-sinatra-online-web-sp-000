@@ -1,5 +1,6 @@
 <h1>Historical Figures</h1>
 <br>
 <% @figures.each do |figure| %>
-  <p><a href="/figures/<%=figure.id%>" target="_blank"><%=figure.name%></a></p>
+  <h3><a href="/figures/<%=figure.id%>" target="_blank"><%=figure.name%></a></h3>
   <%end%>
+<a href="/figures/new" target="_blank">Create a Figure</a>
