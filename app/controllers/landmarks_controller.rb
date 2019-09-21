@@ -12,13 +12,14 @@ class LandmarksController < ApplicationController
 
   post '/landmarks' do
     @landmark = Landmark.create(params["landmark"])
+    @landmark.year_completed = params["landmark"]["year_completed"]
+    @landmark.save
     erb :'/landmarks/#{@landmark.id}'
   end
 
   get '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
-    @landmark.year_completed = params["landmark"]["year_completed"]
-    @landmark.save
+
     erb :'/landmarks/show'
   end
 
