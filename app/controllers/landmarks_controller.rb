@@ -11,9 +11,7 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    @landmark = Landmark.create(params["landmark"])
-    @landmark.year_completed = params["landmark"]["year_completed"]
-    @landmark.save
+    @landmark = Landmark.create(params[:landmark])
     erb :'/landmarks/#{@landmark.id}'
   end
 
