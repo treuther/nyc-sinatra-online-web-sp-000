@@ -6,6 +6,7 @@
 <br>
 <% @landmarks.each do |landmark| %>
   <h3><a href="/landmarks/<%=landmark.id%>" target="_blank"><%=landmark.name%></a></h3>
+  <p><%=landmark.year_completed%></p>
   <%end%>
 <a href="/landmarks/new" target="_blank">Create a Landmark</a>
 
