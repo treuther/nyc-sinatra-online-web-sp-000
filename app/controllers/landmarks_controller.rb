@@ -17,6 +17,7 @@ class LandmarksController < ApplicationController
 
   get '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
+    @landmark.year_completed = params["landmark"]["year_completed"]
     erb :'/landmarks/show'
   end
 
