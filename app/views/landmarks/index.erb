@@ -2,5 +2,12 @@
 
 <!-- add content here -->
 
+<h1>Historical Landmarks</h1>
+<br>
+<% @landmarks.each do |landmark| %>
+  <h3><a href="/landmarks/<%=landmark.id%>" target="_blank"><%=landmark.name%></a></h3>
+  <%end%>
+<a href="/landmarks/new" target="_blank">Create a Landmark</a>
+
 <a class="button" href="/figures">Figures</a>
 <a class="button" href="/">Home</a>
